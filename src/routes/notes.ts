@@ -37,20 +37,22 @@ noteRoute.get('/notes/:id', async (req: Request, res: Response) => {
 
 //DELETE NOTE BY ID
 noteRoute.delete('/notes/:id', deleteNoteMiddleware, async (req: Request, res: Response) => {      
-  res.json(req.app.locals.notes);
+  const param = req.params.id
+   res.status(200).json({id: param, status: "Deleted"});
 });
 
 //UPDATE NOTE BY ID
-noteRoute.patch('/notes/:id', yupValidate(ParamsSchema), yupValidate(NoteEditSchema), updateNoteMiddleware, async (req: Request, res: Response) => {      
-   res.json(req.app.locals.notes);
+noteRoute.patch('/notes/:id', yupValidate(ParamsSchema), yupValidate(NoteEditSchema), updateNoteMiddleware, async (req: Request, res: Response) => {  
+  const param = req.params.id
+   res.status(200).json({id: param, status: "Updated"});
 });
 
 //GET ALL NOTES
 noteRoute.get('/notes', (req, res) => {    
-  res.json(req.app.locals.notes);
+  res.status(200).json(req.app.locals.notes);
 });
 
 //ADD NEW NOTE
 noteRoute.post('/notes', yupValidate(NoteAddSchema), addNoteMiddleware, async (req: Request, res: Response) => {    
-  res.json(req.app.locals.notes);
+  res.status(201).send("New note added");
 });
