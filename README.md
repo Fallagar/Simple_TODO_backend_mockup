@@ -18,38 +18,38 @@ To get started with the project, follow these steps:
 
 # Create a Note
 
-Endpoint: POST /notes
-Action: Create a note object.
+Endpoint: POST /notes <br />
+Action: Create a note object. <br />
 Request Body: Send the note data in x-www-form-urlencoded format. Required fields: name, category, content
 
 # Delete a Note
 
-Endpoint: DELETE /notes/:id
-Action: Remove an item.
+Endpoint: DELETE /notes/:id <br />
+Action: Remove an item. <br />
 Parameters: Replace :id with the ID of the note to delete.
 
 # Update a Note
 
-Endpoint: PATCH /notes/:id
-Action: Edit an item.
-Parameters: Replace :id with the ID of the note to update.
+Endpoint: PATCH /notes/:id <br />
+Action: Edit an item. <br />
+Parameters: Replace :id with the ID of the note to update. <br />
 Request Body: Send the updated note data in x-www-form-urlencoded format. Accepted fields: name, category, content, status
 
 # Retrieve a Note
 
-Endpoint: GET /notes/:id
-Action: Retrieve an item.
+Endpoint: GET /notes/:id <br />
+Action: Retrieve an item. <br />
 Parameters: Replace :id with the ID of the note to retrieve.
 
 # Retrieve All Notes
 
-Endpoint: GET /notes
-Action: Get all notes.
+Endpoint: GET /notes <br />
+Action: Get all notes. <br />
 
 # Aggregated Data Statistics
 
-Endpoint: GET /notes/stats
-Action: Get aggregated data statistics.
+Endpoint: GET /notes/stats <br />
+Action: Get aggregated data statistics. <br />
 Note: The statistics are calculated based on the notes objects.
 
 # Testing with Postman
