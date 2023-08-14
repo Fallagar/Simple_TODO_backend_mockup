@@ -1,4 +1,4 @@
-# Radency Test 3 - Notes API
+# TODO API
 
 This project implements a simple API for managing notes. It provides endpoints to create, retrieve, update, and delete notes, as well as retrieve aggregated data statistics.
 
